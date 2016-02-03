@@ -5,13 +5,14 @@ import org.slf4j.LoggerFactory;
 
 public class UserInfo {
 	
-	private static final Logger log = LoggerFactory.getLogger(UserInfo.class);
+	// Log
+	private static final Logger LOG = LoggerFactory.getLogger(UserInfo.class);
 
     private final String name;
     private final Integer age;
 
     public UserInfo(String name, Integer age) {
-    	log.info("Creating user " + name + ". age: " + age);
+    	LOG.info("Creating user " + name + ". age: " + age);
         this.name = name;
         this.age = age;
     }
