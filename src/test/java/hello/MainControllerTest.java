@@ -1,6 +1,6 @@
 package hello;
 
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 
 import java.net.URL;
@@ -39,7 +39,7 @@ public class MainControllerTest {
 	public void getLanding() throws Exception {
 		String userURI = base.toString() + "/user";  
 		ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
-		assertThat(response.getBody(), equalTo("User Management Service"));
+		assertThat(response.getBody(), containsString("Hola"));
 	}
 	
 	@Test
