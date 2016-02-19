@@ -17,7 +17,7 @@ public class MainController {
     
     @RequestMapping("/hola")
     public String hola(Model model) {
-    	model.addAttribute("nombre", "Juan");
+    	model.addAttribute("nombre", "Luis");
         return "saludo";
     }
 
